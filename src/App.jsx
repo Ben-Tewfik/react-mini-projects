@@ -1,9 +1,10 @@
 import "./App.css";
+import BirthdayParty from "./projects/Birthday Party/BirthdayParty";
 
 function App() {
   return (
     <>
-      <h1>hello world</h1>
+      <BirthdayParty />
     </>
   );
 }
