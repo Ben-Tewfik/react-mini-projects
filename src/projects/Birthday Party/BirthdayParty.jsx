@@ -8,12 +8,14 @@ export default function BirthdayParty() {
     setPeople([]);
   }
   return (
-    <div className="container">
-      <h2 className="title">{people.length} birthdays today</h2>
-      <List people={people} />
-      <button className="btn" onClick={() => handleClick()}>
-        clear all
-      </button>
-    </div>
+    <main className="birthday-main">
+      <div className="container">
+        <h2 className="title">{people.length} birthdays today</h2>
+        <List people={people} />
+        <button className="btn" onClick={() => handleClick()}>
+          clear all
+        </button>
+      </div>
+    </main>
   );
 }
