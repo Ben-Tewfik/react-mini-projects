@@ -63,7 +63,7 @@
 .tour-article-info p {
   margin-bottom: 1rem;
 }
-.tour-article-info button {
+.tour-article-info .btn {
   display: block;
   border: 2px solid #10b981;
   border-radius: 0.3rem;
@@ -76,7 +76,7 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.tour-article-info button:hover {
+.tour-article-info .btn:hover {
   background-color: #10b981;
   color: white;
 }
@@ -84,4 +84,12 @@
   .tours {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   }
+}
+.text-btn {
+  background: none;
+  border: none;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #10b981;
+  cursor: pointer;
 }
