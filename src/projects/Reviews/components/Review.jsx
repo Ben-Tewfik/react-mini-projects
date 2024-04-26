@@ -1,7 +1,12 @@
 import { FaQuoteRight } from "react-icons/fa";
-import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
-export default function Review({ review }) {
+export default function Review({
+  review,
+  handleNext,
+  handlePrevious,
+  handleRandomBtn,
+}) {
   console.log(review);
   const { image, job, name, text } = review;
   return (
@@ -16,10 +21,12 @@ export default function Review({ review }) {
       <h4 className="review-job">{job}</h4>
       <p className="review-text">{text}</p>
       <div className="review-btns-container">
-        <MdArrowBackIos />
-        <MdArrowForwardIos />
+        <FaChevronLeft onClick={() => handlePrevious()} />
+        <FaChevronRight onClick={() => handleNext()} />
       </div>
-      <button className="review-random-btn">surprise me</button>
+      <button className="review-random-btn" onClick={() => handleRandomBtn()}>
+        surprise me
+      </button>
     </article>
   );
 }
