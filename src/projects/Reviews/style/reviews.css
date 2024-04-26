@@ -10,7 +10,7 @@
 .review-container {
   width: 90vw;
   max-width: 600px;
-  padding: 2rem;
+  padding: 1.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
 }
 .review-img-container {
@@ -93,5 +93,5 @@
   transition: all 0.3s ease-in-out;
 }
 .review-btns-container > *:hover {
-  color: #3c3799;
+  color: #645cff;
 }
