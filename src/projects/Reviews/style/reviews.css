@@ -1,0 +1,97 @@
+.reviews-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+}
+.review-container {
+  width: 90vw;
+  max-width: 600px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+.review-img-container {
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.review-img-container::before {
+  content: "";
+  background-color: #645cff;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  left: 0.5rem;
+  bottom: 0.25rem;
+  z-index: -1;
+}
+
+.review-img-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.review-quote-icon {
+  display: inline-block;
+  background-color: #645cff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(25%);
+  color: white;
+}
+.review-name {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: unset;
+  margin-bottom: 0.5rem;
+}
+.review-job {
+  color: #645cff;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.review-text {
+  color: #475569;
+  margin-bottom: 0.75rem;
+}
+.review-random-btn {
+  background-color: #c1beff;
+  border: none;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
+  text-transform: capitalize;
+  color: #645cff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.review-random-btn:hover {
+  background-color: #3c3799;
+  color: white;
+}
+.review-btns-container {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+.review-btns-container > * {
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.review-btns-container > *:hover {
+  color: #3c3799;
+}
