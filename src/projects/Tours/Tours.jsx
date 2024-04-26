@@ -18,6 +18,11 @@ export default function Tours() {
   useEffect(() => {
     fetchTours();
   }, []);
+  function removeTour(id) {
+    console.log(id);
+    const filteredTours = tours.filter(tour => tour.id !== id);
+    setTours(filteredTours);
+  }
   return (
     <main className="tours-main">
       <section className="tours-section">
@@ -27,7 +32,7 @@ export default function Tours() {
         </div>
         <div className="tours">
           {tours.map(tour => {
-            return <Tour tour={tour} key={tour.id} />;
+            return <Tour tour={tour} key={tour.id} removeTour={removeTour} />;
           })}
         </div>
       </section>
