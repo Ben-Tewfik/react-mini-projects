@@ -61,7 +61,7 @@
   height: 3rem;
   margin-bottom: 2rem;
 }
-.tour-article-info p {
+.tour-article-info .infoWithoutHeight {
   margin-bottom: 1rem;
 }
 .info-height {
@@ -97,4 +97,39 @@
   font-weight: bold;
   color: #10b981;
   cursor: pointer;
+}
+.loading {
+  height: 5rem;
+  width: 5rem;
+  margin: 3rem auto;
+  border: 6px solid lightgray;
+  border-top-color: #10b981;
+  border-radius: 50%;
+  animation: spin 1.3s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.empty-data h4 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+.empty-data button {
+  display: block;
+  border: none;
+  border-radius: 0.3rem;
+  margin: 2rem auto 0;
+  color: white;
+  text-transform: capitalize;
+  padding: 0.4rem 0.6rem;
+  letter-spacing: 2px;
+  background-color: #10b981;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.empty-data button:hover {
+  background-color: #20bf8a;
 }
