@@ -64,6 +64,10 @@
 .tour-article-info p {
   margin-bottom: 1rem;
 }
+.info-height {
+  height: 20rem;
+  margin-bottom: 0;
+}
 .tour-article-info .btn {
   display: block;
   border: 2px solid #10b981;
