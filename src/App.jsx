@@ -1,10 +1,10 @@
 import "./App.css";
-import Reviews from "./projects/Reviews";
+import Questions from "./projects/Questions";
 
 function App() {
   return (
     <>
-      <Reviews />
+      <Questions />
     </>
   );
 }
