@@ -1,9 +1,9 @@
-import Question from "./components/Question";
+import Questions from "./components/Questions";
 import "./style/questions.css";
-export default function Questions() {
+export default function Index() {
   return (
-    <main className="questions-container">
-      <Question />
+    <main className="questions-main-container">
+      <Questions />
     </main>
   );
 }
