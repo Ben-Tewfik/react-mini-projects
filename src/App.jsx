@@ -1,10 +1,10 @@
 import "./App.css";
-import Questions from "./projects/Questions";
+import Menu from "./projects/Menu";
 
 function App() {
   return (
     <>
-      <Questions />
+      <Menu />
     </>
   );
 }
