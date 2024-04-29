@@ -1,11 +1,17 @@
 import "./style/menu.css";
 import list from "../../utils/menuData";
-console.log(list);
 import { useState } from "react";
 export default function Index() {
   const [menu, setMenu] = useState(list);
   let categories = ["all", ...new Set(list.map(meal => meal.category))];
-  console.log(categories);
+  function handleClick(category) {
+    if (category === "all") {
+      setMenu(list);
+      return;
+    }
+    const filteredMenu = list.filter(item => item.category === category);
+    setMenu(filteredMenu);
+  }
   return (
     <main className="main-menu">
       <div className="menu-title-container">
@@ -14,12 +20,16 @@ export default function Index() {
       </div>
       <div className="category-container">
         {categories.map(category => {
-          return <button key={category}>{category}</button>;
+          return (
+            <button key={category} onClick={() => handleClick(category)}>
+              {category}
+            </button>
+          );
         })}
       </div>
       <section className="menu-container">
         {menu.map(item => {
-          const { category, desc, id, img, price, title } = item;
+          const { desc, id, img, price, title } = item;
           return (
             <article key={id} className="menu-item-container">
               <img src={img} alt={title} />
