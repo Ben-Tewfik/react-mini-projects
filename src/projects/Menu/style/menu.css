@@ -41,3 +41,65 @@
 .category-container button:hover {
   background-color: #b45309;
 }
+.menu-container {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+.menu-item-container {
+  width: 90%;
+  margin: 0 auto;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+.menu-item-container img {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+.desc-container {
+  padding: 1.5rem;
+}
+.desc-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.desc-title {
+  font-weight: unset;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.desc-price {
+  background-color: #f59e0b;
+  color: white;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.3rem;
+}
+.description {
+  color: #64748b;
+  line-height: 2;
+}
+.description::first-letter {
+  text-transform: capitalize;
+}
+
+/* media  */
+@media screen and (min-width: 992px) {
+  .menu-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1120px) {
+  .menu-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
