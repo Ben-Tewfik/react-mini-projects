@@ -26,3 +26,35 @@
   color: #14b8a6;
   box-shadow: 0 2px #14b8a6;
 }
+
+.tab-container .tab-title {
+  font-size: 1.9rem;
+  font-weight: unset;
+}
+.tab-container .tab-company {
+  display: inline-block;
+  margin: 0.5rem 0;
+  color: #334155;
+  background-color: #cbd5e1;
+  border-radius: 0.3rem;
+  padding: 0.375rem 0.75rem;
+}
+.tab-container .tab-date {
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+.tab-duties .duty-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  place-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.duty-container .duty-icon {
+  color: #14b8a6;
+  font-size: 1.5rem;
+}
+.duty-container .duty-desc {
+  color: #334155;
+  line-height: 1.5;
+}
