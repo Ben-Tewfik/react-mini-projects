@@ -28,8 +28,9 @@
 }
 
 .tab-container .tab-title {
-  font-size: 1.9rem;
+  font-size: 1.953rem;
   font-weight: unset;
+  line-height: 1;
 }
 .tab-container .tab-company {
   display: inline-block;
@@ -57,4 +58,29 @@
 .duty-container .duty-desc {
   color: #334155;
   line-height: 1.5;
+}
+
+/* media */
+@media screen and (min-width: 992px) {
+  .tabs-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 4rem;
+  }
+  .tab-buttons-container {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .tab-buttons-container button {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .tab-buttons-container button:hover {
+    color: #14b8a6;
+    box-shadow: -2px 0 #14b8a6;
+  }
+  .active {
+    color: #14b8a6;
+    box-shadow: -2px 0 #14b8a6;
+  }
 }

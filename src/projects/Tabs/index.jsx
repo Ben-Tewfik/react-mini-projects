@@ -23,23 +23,21 @@ export default function Tabs() {
           );
         })}
       </div>
-      <div className="tabs-info-container">
-        <article className="tab-container" key={id}>
-          <h1 className="tab-title">{title}</h1>
-          <span className="tab-company">{company}</span>
-          <p className="tab-date">{dates}</p>
-          <div className="tab-duties">
-            {duties.map((duty, index) => {
-              return (
-                <div className="duty-container" key={index}>
-                  <MdOutlineKeyboardDoubleArrowRight className="duty-icon" />
-                  <p className="duty-desc">{duty}</p>
-                </div>
-              );
-            })}
-          </div>
-        </article>
-      </div>
+      <article className="tab-container" key={id}>
+        <h3 className="tab-title">{title}</h3>
+        <span className="tab-company">{company}</span>
+        <p className="tab-date">{dates}</p>
+        <div className="tab-duties">
+          {duties.map((duty, index) => {
+            return (
+              <div className="duty-container" key={index}>
+                <MdOutlineKeyboardDoubleArrowRight className="duty-icon" />
+                <p className="duty-desc">{duty}</p>
+              </div>
+            );
+          })}
+        </div>
+      </article>
     </section>
   );
 }
