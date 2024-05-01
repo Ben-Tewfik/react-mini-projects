@@ -1,3 +1,4 @@
+import "./style/tabs.css";
 import { useState } from "react";
 import tabs from "../../utils/tabsData";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
@@ -10,7 +11,13 @@ export default function Tabs() {
       <div className="tab-buttons-container">
         {tabs.map((item, index) => {
           return (
-            <button key={item.id} onClick={() => setValue(index)}>
+            <button
+              key={item.id}
+              className={index === value ? "active" : null}
+              onClick={() => {
+                setValue(index);
+              }}
+            >
               {item.company}
             </button>
           );
