@@ -1,10 +1,10 @@
 import "./App.css";
-import Tabs from "./projects/Tabs";
+import Slider from "./projects/Quote Slider/Slider";
 
 function App() {
   return (
     <>
-      <Tabs />
+      <Slider />
     </>
   );
 }
