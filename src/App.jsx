@@ -1,10 +1,10 @@
 import "./App.css";
-import Slider from "./projects/Quote Slider/Slider";
+import LoremIpsum from "./projects/Lorem Ipsum/LoremIpsum";
 
 function App() {
   return (
     <>
-      <Slider />
+      <LoremIpsum />
     </>
   );
 }
