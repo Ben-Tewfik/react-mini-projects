@@ -44,3 +44,6 @@
 .lorem-btn:hover {
   background-color: #047857;
 }
+.lorem-text {
+  margin-bottom: 2rem;
+}
