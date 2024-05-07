@@ -1,0 +1,47 @@
+.colors-main {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: #f8fafc;
+}
+.colors-form-section {
+  text-align: center;
+  text-transform: capitalize;
+  padding: 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+input[type="color"] {
+  background: #fff;
+  border: none;
+  height: 42px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+input[type="text"] {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #fff;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  font-size: 1.2rem;
+}
+.colors-btn {
+  padding: 6px 12px;
+  border: none;
+  background-color: #4c8558;
+  color: white;
+  text-transform: capitalize;
+  font-size: 1rem;
+  cursor: pointer;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  transition: all 0.3s ease-in-out;
+}
+.colors-btn:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.colors-form {
+  display: flex;
+  justify-content: center;
+}
