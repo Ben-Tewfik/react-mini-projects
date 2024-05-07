@@ -1,11 +1,12 @@
 import Values from "values.js";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import SingleColor from "./components/SingleColor";
 import "./style/colors.css";
 export default function Colors() {
-  const [error, setError] = useState(false);
   const [color, setColor] = useState("");
-  const [list, setList] = useState([]);
+  const [list, setList] = useState(new Values("#f15025").all(10));
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -13,7 +14,7 @@ export default function Colors() {
       const colors = new Values(color).all(10);
       setList(colors);
     } catch (error) {
-      console.log(error);
+      toast.error(`${error}`, { position: "top-center" });
     }
   }
   return (
@@ -43,12 +44,18 @@ export default function Colors() {
       </section>
       <section className="colors-section">
         {list.map((color, index) => {
-          console.log(color);
           return (
-            <SingleColor key={index} {...color} index={index} hex={color.hex} />
+            <SingleColor
+              key={index}
+              {...color}
+              index={index}
+              hex={color.hex}
+              toast={toast}
+            />
           );
         })}
       </section>
+      <ToastContainer />
     </main>
   );
 }
