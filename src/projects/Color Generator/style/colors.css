@@ -45,3 +45,20 @@ input[type="text"] {
   display: flex;
   justify-content: center;
 }
+.colors-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(223px, 1fr));
+  gap: 0.2rem;
+}
+.single-color {
+  text-align: center;
+  padding: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.single-color p:first-child {
+  margin-bottom: 0.5rem;
+}
+.light-color {
+  color: white;
+}
