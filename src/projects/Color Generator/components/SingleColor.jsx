@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export default function SingleColor({ weight, index, hex, toast }) {
   const [alert, setAlert] = useState(false);
   function handleClick() {
@@ -8,6 +8,12 @@ export default function SingleColor({ weight, index, hex, toast }) {
       position: "top-center",
     });
   }
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setAlert(false);
+    }, 2000);
+    return () => clearTimeout(timeout);
+  }, [alert]);
   return (
     <article
       className={`${index > 7 ? "light-color" : ""} single-color`}
