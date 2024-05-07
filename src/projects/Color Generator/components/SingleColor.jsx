@@ -4,7 +4,9 @@ export default function SingleColor({ weight, index, hex, toast }) {
   function handleClick() {
     navigator.clipboard.writeText(`#${hex}`);
     setAlert(true);
-    toast.success(`#${hex.toUpperCase()} Copied to Clipboard`);
+    toast.success(`#${hex.toUpperCase()} Copied to Clipboard`, {
+      position: "top-center",
+    });
   }
   return (
     <article
