@@ -1,11 +1,11 @@
 import { ToastContainer } from "react-toastify";
 import "./App.css";
-import Colors from "./projects/Color Generator/Colors";
+import Grocery from "./projects/Grocery Bud/Grocery";
 
 function App() {
   return (
     <>
-      <Colors />
+      <Grocery />
       <ToastContainer />
     </>
   );
