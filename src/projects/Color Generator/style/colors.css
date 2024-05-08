@@ -11,14 +11,14 @@
   display: grid;
   gap: 1.5rem;
 }
-input[type="color"] {
+.colors-form [type="color"] {
   background: #fff;
   border: none;
   height: 42px;
   cursor: pointer;
   margin-right: 0.5rem;
 }
-input[type="text"] {
+.colors-form [type="text"] {
   padding: 0.5rem 1rem;
   border: none;
   background: #fff;
