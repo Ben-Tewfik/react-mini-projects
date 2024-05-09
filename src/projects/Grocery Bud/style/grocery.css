@@ -46,3 +46,45 @@
 .list-container {
   margin-top: 2rem;
 }
+
+.grocery-item-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.grocery-item-title {
+  text-align: left;
+  padding-left: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.grocery-btns-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+.grocery-btns-container .grocery-edit-btn,
+.grocery-delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.1rem;
+}
+.grocery-btns-container .grocery-delete-btn {
+  color: tomato;
+}
+.grocery-btns-container .grocery-edit-btn {
+  color: seagreen;
+}
+
+.clear-btn {
+  background: none;
+  border: none;
+  text-transform: capitalize;
+  color: tomato;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
