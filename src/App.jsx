@@ -1,11 +1,11 @@
 import { ToastContainer } from "react-toastify";
 import "./App.css";
-import Grocery from "./projects/Grocery Bud/Grocery";
+import Navbar from "./projects/Navbar/Navbar";
 
 function App() {
   return (
     <>
-      <Grocery />
+      <Navbar />
       <ToastContainer />
     </>
   );
