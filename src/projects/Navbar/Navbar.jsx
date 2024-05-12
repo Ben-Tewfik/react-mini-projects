@@ -17,21 +17,35 @@ export default function Navbar() {
   return (
     <section className="navbar-container">
       <div className="navbar-center">
-        <h1 className="navbar-logo">
-          coding <span>addict</span>
-        </h1>
-        <button className="toggle-btn" onClick={() => setShowList(!showList)}>
-          <FaBars className="toggle-icon" />
-        </button>
-      </div>
-      <div className="links-container" ref={linksContainerRef}>
-        <ul className="links-list" ref={linksListRef}>
-          {links.map(link => {
-            const { id, url, text } = link;
+        <div className="nav-header">
+          <h1 className="navbar-logo">
+            coding <span>addict</span>
+          </h1>
+          <button className="toggle-btn" onClick={() => setShowList(!showList)}>
+            <FaBars className="toggle-icon" />
+          </button>
+        </div>
+        <div className="links-container" ref={linksContainerRef}>
+          <ul className="links-list" ref={linksListRef}>
+            {links.map(link => {
+              const { id, url, text } = link;
+              return (
+                <li key={id}>
+                  <a href={url} className="link">
+                    {text}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <ul className="social-icons">
+          {social.map(item => {
+            const { id, url, icon } = item;
             return (
               <li key={id}>
-                <a href={url} className="link">
-                  {text}
+                <a href={url} target="_blank" className="icon-link">
+                  {icon}
                 </a>
               </li>
             );
