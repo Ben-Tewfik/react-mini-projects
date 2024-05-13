@@ -4,10 +4,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  background-color: #f1f5f9;
 }
 .sidebar-bars-btn {
-  position: absolute;
+  position: fixed;
   top: 2rem;
   left: 3rem;
   border: none;
@@ -87,4 +87,82 @@
   opacity: 1;
   transition: all 0.3s ease-in-out;
   z-index: 10;
+}
+
+.sidebar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  display: grid;
+  grid-template-rows: auto 1fr 100px;
+  transition: all 0.3s linear;
+  transform: translateX(-100%);
+}
+.show-sidebar {
+  transform: translateX(0);
+}
+.sidebar-header {
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidebar-header .sidebar-close-btn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  color: #842029;
+  display: grid;
+  place-items: center;
+}
+.sidebar-header h1 {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.sidebar-header h1 > span {
+  color: #49a6e9;
+}
+
+.links-list,
+.icons-list {
+  list-style: none;
+}
+.links-list .link {
+  display: flex;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #334155;
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+.links-list .link:hover {
+  background-color: #f1f5f9;
+}
+.icons-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.icons-list .icon {
+  text-decoration: none;
+  color: #49a6e9;
+  font-size: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.icons-list .icon:hover {
+  color: #1a6aa2;
+}
+
+@media screen and (min-width: 687px) {
+  .sidebar-container {
+    width: 400px;
+  }
 }
