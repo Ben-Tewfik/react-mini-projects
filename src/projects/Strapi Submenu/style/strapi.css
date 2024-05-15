@@ -1,0 +1,43 @@
+.main-strapi {
+  background-color: #6366f1;
+  color: white;
+}
+.hero-container {
+  height: calc(100vh - 5rem);
+  display: grid;
+  place-items: center;
+  color: white;
+}
+.strapi-nav {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+}
+.nav-center {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-header h1 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  cursor: default;
+}
+.nav-header .strapi-btn {
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 0.25rem;
+  border-color: transparent;
+  color: #4338ca;
+  background: white;
+  transition: all 0.3s ease-in-out;
+}
+.nav-header .strapi-btn:hover {
+  transform: scale(1.05);
+}
