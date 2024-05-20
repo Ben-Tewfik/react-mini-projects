@@ -90,6 +90,7 @@
   border: none;
   color: #4338ca;
   font-size: 2rem;
+  cursor: pointer;
 }
 .strapi-sidebar-container article {
   margin-bottom: 2rem;
@@ -153,5 +154,8 @@
     max-width: 560px;
     margin: auto;
     text-align: center;
+  }
+  .strapi-sidebar {
+    display: none;
   }
 }

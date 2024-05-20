@@ -1,10 +1,12 @@
 import { FaTimes } from "react-icons/fa";
 import sublinks from "../../../utils/StrapiData";
+import { useGlobalContext } from "../context/StrapiContext";
 export default function Sidebar() {
+  const { sidebar, closeSidebar } = useGlobalContext();
   return (
-    <aside className="strapi-sidebar">
+    <aside className={`${sidebar ? "show-sidebar" : ""} strapi-sidebar`}>
       <div className="strapi-sidebar-container">
-        <button className="sidebar-close-btn">
+        <button className="sidebar-close-btn" onClick={closeSidebar}>
           <FaTimes />
         </button>
         <div className="links-container">

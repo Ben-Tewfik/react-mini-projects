@@ -1,12 +1,14 @@
 import { FaBars } from "react-icons/fa";
+import { useGlobalContext } from "../context/StrapiContext";
 
 export default function Navbar() {
+  const { openSidebar } = useGlobalContext();
   return (
     <nav className="strapi-nav">
       <div className="nav-center">
         <div className="nav-header">
           <h1>strapi</h1>
-          <button className="strapi-btn">
+          <button className="strapi-btn" onClick={openSidebar}>
             <FaBars />
           </button>
         </div>
