@@ -1,11 +1,11 @@
 import { ToastContainer } from "react-toastify";
 import "./App.css";
-import SideBarModal from "./projects/SideBar/SideBarModal";
+import StrapiSubmenu from "./projects/Strapi Submenu/StrapiSubmenu";
 
 function App() {
   return (
     <>
-      <SideBarModal />
+      <StrapiSubmenu />
       <ToastContainer />
     </>
   );

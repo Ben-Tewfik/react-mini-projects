@@ -8,6 +8,18 @@
   place-items: center;
   color: white;
 }
+.hero-center {
+  width: 90vw;
+}
+.hero-center h1 {
+  font-size: 4rem;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.hero-center p::first-letter {
+  text-transform: capitalize;
+}
 .strapi-nav {
   height: 5rem;
   display: flex;
@@ -40,4 +52,48 @@
 }
 .nav-header .strapi-btn:hover {
   transform: scale(1.05);
+}
+
+.nav-list {
+  list-style-type: none;
+  display: none;
+}
+.nav-list-btn {
+  background: none;
+  border: none;
+  color: white;
+}
+
+@media screen and (min-width: 992px) {
+  .strapi-btn {
+    display: none;
+  }
+  .nav-center {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* align-self: stretch; */
+    gap: 2rem;
+  }
+  .nav-list .nav-list-btn {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  .hero-center h1 {
+    font-size: 5rem;
+    max-width: 1170px;
+    text-align: center;
+    margin: 0 auto 1rem;
+  }
+  .hero-center p {
+    max-width: 560px;
+    margin: auto;
+    text-align: center;
+  }
 }

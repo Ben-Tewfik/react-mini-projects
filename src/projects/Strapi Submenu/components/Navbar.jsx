@@ -10,6 +10,17 @@ export default function Navbar() {
             <FaBars />
           </button>
         </div>
+        <ul className="nav-list">
+          <li>
+            <button className="nav-list-btn">product</button>
+          </li>
+          <li>
+            <button className="nav-list-btn">solutions</button>
+          </li>
+          <li>
+            <button className="nav-list-btn">resources</button>
+          </li>
+        </ul>
       </div>
     </nav>
   );
