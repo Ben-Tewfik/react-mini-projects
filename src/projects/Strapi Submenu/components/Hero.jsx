@@ -1,6 +1,9 @@
+import { useGlobalContext } from "../context/StrapiContext";
+
 export default function Hero() {
+  const { hideSubmenu } = useGlobalContext();
   return (
-    <section className="hero-container">
+    <section className="hero-container" onMouseOver={hideSubmenu}>
       <div className="hero-center">
         <h1>manage any content anywhere</h1>
         <p>
