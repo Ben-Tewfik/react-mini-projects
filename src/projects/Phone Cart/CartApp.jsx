@@ -5,10 +5,8 @@ import { CartContext } from "./Context/CartContext";
 export default function CartApp() {
   return (
     <CartContext>
-      <main className="cartApp-main">
-        <Navbar />
-        <Cart />
-      </main>
+      <Navbar />
+      <Cart />
     </CartContext>
   );
 }

@@ -1,14 +1,23 @@
-import { cartItems } from "../../../utils/cartData";
+import { useGlobalContext } from "../Context/CartContext";
 import CartItem from "./CartItem";
 
 export default function Cart() {
+  const { cart, clearCart } = useGlobalContext();
+  if (cart.length === 0) {
+    return (
+      <header className="empty-cart-header">
+        <h2>your bag</h2>
+        <h3>is currently empty</h3>
+      </header>
+    );
+  }
   return (
     <section className="cart-container">
       <header className="cart-header">
         <h2>your bag</h2>
       </header>
       <article className="cart-main">
-        {cartItems.map(item => {
+        {cart.map(item => {
           return <CartItem key={item.id} {...item} />;
         })}
       </article>
@@ -17,7 +26,9 @@ export default function Cart() {
         <h5>
           total <span>$0</span>
         </h5>
-        <button className="cart-clear-btn">clear cart</button>
+        <button className="cart-clear-btn" onClick={clearCart}>
+          clear cart
+        </button>
       </footer>
     </section>
   );
