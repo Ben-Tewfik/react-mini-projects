@@ -42,3 +42,106 @@
   color: white;
   font-size: 1.2rem;
 }
+.cart-container {
+  width: 90vw;
+  max-width: 800px;
+  margin: 2.5rem auto 0;
+  padding: 2.5rem 0;
+}
+.cart-header h2 {
+  text-align: center;
+  text-transform: capitalize;
+  color: #0f172a;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+.cart-footer {
+  margin-top: 5rem;
+}
+.cart-footer hr {
+  margin-bottom: 1rem;
+  border-color: #cbd5e1;
+  border-width: 1px;
+}
+.cart-footer h5 {
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+.cart-footer h5 span {
+  background-color: #645cff;
+  color: white;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+}
+.cart-clear-btn {
+  display: block;
+  margin: 0 auto;
+  background-color: #a29dff;
+  border-color: transparent;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  text-transform: capitalize;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.cart-clear-btn:hover {
+  background-color: #645cff;
+}
+.single-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  margin: 1.5rem 0;
+  gap: 1rem;
+}
+.single-item-img {
+  display: block;
+  height: 5rem;
+  width: 5rem;
+  object-fit: cover;
+}
+.single-item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.25rem;
+}
+.single-item-info h5 {
+  text-transform: capitalize;
+}
+.single-item-info span {
+  color: #64748b;
+}
+.single-item-info .remove-btn {
+  background: none;
+  border: none;
+  color: #645cff;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: all 0.3s ease-in-out;
+}
+.single-item-info .remove-btn:hover {
+  color: #372dfc;
+}
+.single-item-toggle-container button {
+  display: block;
+  background: none;
+  border: none;
+  width: 1.5rem;
+  color: #645cff;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+.single-item-toggle-container button svg {
+  display: block;
+  font-size: 1.5rem;
+}
+.single-item-toggle-container .single-item-amount {
+  display: block;
+  text-align: center;
+}
