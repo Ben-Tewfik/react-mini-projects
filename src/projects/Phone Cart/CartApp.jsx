@@ -1,11 +1,14 @@
 import "./style/cart.css";
 import Navbar from "./components/Navbar";
 import Cart from "./components/Cart";
+import { CartContext } from "./Context/CartContext";
 export default function CartApp() {
   return (
-    <main className="cartApp-main">
-      <Navbar />
-      <Cart />
-    </main>
+    <CartContext>
+      <main className="cartApp-main">
+        <Navbar />
+        <Cart />
+      </main>
+    </CartContext>
   );
 }
