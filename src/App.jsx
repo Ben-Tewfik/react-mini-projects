@@ -1,11 +1,11 @@
 import { ToastContainer } from "react-toastify";
 import "./App.css";
-import StrapiSubmenu from "./projects/Strapi Submenu/StrapiSubmenu";
+import CartApp from "./projects/Phone Cart/CartApp";
 
 function App() {
   return (
     <>
-      <StrapiSubmenu />
+      <CartApp />
       <ToastContainer />
     </>
   );
