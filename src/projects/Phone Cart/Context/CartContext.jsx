@@ -20,9 +20,17 @@ function CartContext({ children }) {
   function removeItem(id) {
     dispatch({ type: "REMOVE_ITEM", payload: id });
   }
+  function increase(id) {
+    dispatch({ type: "INCREASE", payload: id });
+  }
+  function decrease(id) {
+    dispatch({ type: "DECREASE", payload: id });
+  }
 
   return (
-    <GlobalContext.Provider value={{ ...state, clearCart, removeItem }}>
+    <GlobalContext.Provider
+      value={{ ...state, clearCart, removeItem, increase, decrease }}
+    >
       {children}
     </GlobalContext.Provider>
   );
