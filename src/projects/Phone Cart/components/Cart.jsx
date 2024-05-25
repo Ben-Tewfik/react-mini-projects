@@ -2,7 +2,7 @@ import { useGlobalContext } from "../Context/CartContext";
 import CartItem from "./CartItem";
 
 export default function Cart() {
-  const { cart, clearCart } = useGlobalContext();
+  const { cart, clearCart, total } = useGlobalContext();
   if (cart.length === 0) {
     return (
       <header className="empty-cart-header">
@@ -24,7 +24,7 @@ export default function Cart() {
       <footer className="cart-footer">
         <hr />
         <h5>
-          total <span>$0</span>
+          total <span>${total}</span>
         </h5>
         <button className="cart-clear-btn" onClick={clearCart}>
           clear cart

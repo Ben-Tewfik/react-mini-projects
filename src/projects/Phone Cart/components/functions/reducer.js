@@ -29,6 +29,20 @@ export default function reducer(state, action) {
     });
     return { ...state, cart: tempCart };
   }
+  if (action.type === "TOTAL_ITEMS") {
+    let { amount, total } = state.cart.reduce(
+      (totalItems, currItem) => {
+        const { amount, price } = currItem;
+        const totalPrice = price * amount;
+        totalItems.amount += amount;
+        totalItems.total += totalPrice;
+        return totalItems;
+      },
+      { amount: 0, total: 0 }
+    );
+    total = parseFloat(total.toFixed(2));
+    return { ...state, amount, total };
+  }
 
   throw new Error("no such action exist");
 }

@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 import reducer from "../components/functions/reducer";
 import { cartItems } from "../../../utils/cartData";
 
@@ -26,7 +26,9 @@ function CartContext({ children }) {
   function decrease(id) {
     dispatch({ type: "DECREASE", payload: id });
   }
-
+  useEffect(() => {
+    dispatch({ type: "TOTAL_ITEMS" });
+  }, [state.cart]);
   return (
     <GlobalContext.Provider
       value={{ ...state, clearCart, removeItem, increase, decrease }}
