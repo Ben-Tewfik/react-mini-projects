@@ -1,11 +1,11 @@
 import { ToastContainer } from "react-toastify";
 import "./App.css";
-import CartApp from "./projects/Phone Cart/CartApp";
+import FaselMovieSlider from "./projects/Fasel Movie Slider/FaselMovieSlider";
 
 function App() {
   return (
     <>
-      <CartApp />
+      <FaselMovieSlider />
       <ToastContainer />
     </>
   );
