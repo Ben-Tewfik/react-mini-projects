@@ -23,11 +23,11 @@
   object-fit: cover;
   display: block;
   border-radius: 1rem;
-  filter: grayscale(100%);
+  filter: brightness(50%) grayscale(100%);
   transition: all 0.3s ease-in-out;
 }
 .fasel-slider-container:hover .fasel-slider-img {
-  filter: grayscale(0%);
+  filter: brightness(100%) grayscale(0%);
 }
 .fasel-slider-img-info {
   position: absolute;
@@ -54,7 +54,9 @@
   border-right: 1px solid lightgray;
   padding-right: 1rem;
 }
+
 .fasel-slider-img-desc {
+  color: lightgray;
   margin-bottom: 1rem;
 }
 .fasel-slider-poster {
@@ -149,5 +151,11 @@
   }
   .next-slide-btn {
     right: 1rem;
+  }
+  .fasel-slider-img-desc {
+    max-width: 50rem;
+  }
+  .fasel-slider-img-title {
+    font-size: 3rem;
   }
 }

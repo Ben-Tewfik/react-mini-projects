@@ -5,6 +5,7 @@ import movies from "../../utils/faselSliderData";
 import { useEffect, useState } from "react";
 export default function FaselMovieSlider() {
   const [imageIndex, setImageIndex] = useState(0);
+  const [isForward, setIsForward] = useState(true);
   console.log("out", imageIndex);
   function showNextSlide() {
     setImageIndex(index => {
@@ -21,13 +22,25 @@ export default function FaselMovieSlider() {
 
   useEffect(() => {
     // cleanup function
-    setTimeout(() => {
-      if (imageIndex >= movies.length - 1) {
-        return setImageIndex(0);
-      }
-      return setImageIndex(imageIndex + 1);
-    }, 5000);
-  }, [imageIndex]);
+    const time = setTimeout(() => {
+      setImageIndex(index => {
+        if (isForward) {
+          if (index >= movies.length - 1) {
+            setIsForward(false);
+            return index - 1;
+          }
+          return index + 1;
+        } else {
+          if (index <= 0) {
+            setIsForward(true);
+            return index + 1;
+          }
+          return index - 1;
+        }
+      });
+    }, 4000);
+    return () => clearTimeout(time);
+  }, [imageIndex, isForward]);
   return (
     <section className="fasel-slider-container">
       <div className="fasel-slider-img-container">
