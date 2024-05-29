@@ -10,6 +10,7 @@
   height: 100%;
   display: flex;
   overflow: hidden;
+  border-radius: 1rem;
 }
 .slider-img-container {
   width: 100%;
@@ -27,7 +28,7 @@
   transition: all 0.3s ease-in-out;
 }
 .fasel-slider-container:hover .fasel-slider-img {
-  filter: brightness(100%) grayscale(0%);
+  filter: brightness(50%) grayscale(0%);
 }
 .fasel-slider-img-info {
   position: absolute;
