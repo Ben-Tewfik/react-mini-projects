@@ -1,0 +1,43 @@
+.meals-nav {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  padding: 1.5rem;
+}
+.meals-nav-center {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.meals-nav-center > .meals-img {
+  width: 200px;
+  height: auto;
+}
+.meals-link-list {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+}
+.meals-link-list > li > .meals-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+.meals-about {
+  padding: 5rem 3rem;
+  text-align: center;
+}
+.meals-about .meals-about-title {
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin-bottom: 3rem;
+}
+.meals-about .meals-about-text {
+  line-height: 1.8;
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
