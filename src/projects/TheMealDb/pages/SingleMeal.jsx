@@ -1,6 +1,5 @@
 import { Link, useParams } from "react-router-dom";
 import { useGlobalMealContext } from "../context/MealsContext";
-import Loading from "../components/Loading";
 
 export default function SingleMeal() {
   const { meals } = useGlobalMealContext();
