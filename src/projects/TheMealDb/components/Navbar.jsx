@@ -1,25 +1,40 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 export default function Navbar() {
   return (
     <nav className="meals-nav">
       <div className="meals-nav-center">
-        <img src={logo} alt="meals logo" className="meals-img" />
+        <Link to="/meals" className="meals-img-link">
+          <img src={logo} alt="meals logo" className="meals-img" />
+        </Link>
         <ul className="meals-link-list">
           <li>
-            <Link to="/" className="meals-link">
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "meals-link")}
+            >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/meals" className="meals-link">
+            <NavLink
+              to="/meals"
+              className={({ isActive }) =>
+                isActive ? "meals-link active" : "meals-link"
+              }
+            >
               Meals
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/meals/about" className="meals-link">
+            <NavLink
+              to="/meals/about"
+              className={({ isActive }) =>
+                isActive ? "meals-link active" : "meals-link"
+              }
+            >
               About
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>

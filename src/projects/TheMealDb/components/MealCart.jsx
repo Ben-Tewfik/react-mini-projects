@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function MealCart({ id, category, title, area, image }) {
   return (
     <article className="meal-cart">
@@ -6,7 +8,9 @@ export default function MealCart({ id, category, title, area, image }) {
         <h3>{title}</h3>
         <h5>{category}</h5>
         <p>{area}</p>
-        <button className="meal-cart-btn">details</button>
+        <Link to={`/meals/meal/${id}`} className="meal-cart-btn">
+          details
+        </Link>
       </div>
     </article>
   );
